@@ -1,6 +1,7 @@
+from alfabetos.Alfabeto import Alfabeto
+
 alfabeto_1=str("""{dmd vs, 4q 52 6}""")
 alfabeto_2=str("""{dmdvs, dsa * ? 6 5 30}""")
-print(alfabeto_2[1:len(alfabeto_2)-1])
 
 def procesar_alfabeto(alfabeto):
     alfabeto=alfabeto[1:len(alfabeto)-1]
@@ -16,7 +17,14 @@ def procesar_alfabeto(alfabeto):
             
     return alfabeto_procesado
 
-print(procesar_alfabeto(alfabeto_2))        
-    
+print(procesar_alfabeto(alfabeto_1))  
+print(procesar_alfabeto(alfabeto_2))       
+
+a1=procesar_alfabeto(alfabeto_1)
+a2=procesar_alfabeto(alfabeto_2)
+
+
+alf=Alfabeto(a1,a2)
+print(alf.resta())
 
 
