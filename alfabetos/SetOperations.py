@@ -1,5 +1,5 @@
+import random
 class SetOperations:
-    
     def __init__(self, alphabet1,alphabet2):
           def __init__(self):
             self.list = []
@@ -36,8 +36,22 @@ class SetOperations:
     
 
 class Alphabets(SetOperations):
-    def star_lock():
-        pass
+    def star_lock(self, index, cant_word):
+        list_result=[]
+        Alphabet=self.list[index]
+        i=0
+        while i in cant_word:
+            word=''
+            for j in range(random.randint(2,5)):
+                word += str(random.choice(Alphabet))
+            if(word not in list_result):
+                list_result.append(word)    
+            else:
+                i-=1    
+            
+            i+=1    
+        
+        
     
     
 class Language(SetOperations):
