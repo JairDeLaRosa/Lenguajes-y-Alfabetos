@@ -1,30 +1,41 @@
-from alfabetos.Alfabeto import Alfabeto
+from alfabetos.SetOperations import SetOperations
+import os, time
 
-alfabeto_1=str("""{dmd vs, 4q 52 6}""")
-alfabeto_2=str("""{dmdvs, dsa * ? 6 5 30}""")
+def enterAlphabets(N):
+    i=0
+    listAlphabets=[]
+    for i in range(i,N):
+        alphabet=set(input(f"ingrese el alfabeto separado {i + 1} por espacios: ").split(" "))
+        listAlphabets.append(alphabet)
+ 
+    return listAlphabets
 
-def procesar_alfabeto(alfabeto):
-    alfabeto=alfabeto[1:len(alfabeto)-1]
-    alfabeto=f"{alfabeto} "
-    elemento_agregar=""
-    alfabeto_procesado=set()
-    for indice in range(len(alfabeto)):
-        if alfabeto[indice] != " ":
-            elemento_agregar=f"{elemento_agregar}{alfabeto[indice]}"
-        else:
-            alfabeto_procesado.add(elemento_agregar)
-            elemento_agregar=""
-            
-    return alfabeto_procesado
-
-print(procesar_alfabeto(alfabeto_1))  
-print(procesar_alfabeto(alfabeto_2))       
-
-a1=procesar_alfabeto(alfabeto_1)
-a2=procesar_alfabeto(alfabeto_2)
+alphabets=[]
 
 
-alf=Alfabeto(a1,a2)
-print(alf.resta())
+while True:
+    os.system("cls")
+    print("""
+        1-ingresa alfabeto
+        2-mostrar
+        0-salir
+    """)
+    opcion = int(input("Ingrese la opcion: "))
+    match opcion:
+        case 1:
+            cant_alfabetos = int(input("Ingrese la cantidad de alfabetos a ingresar: "))
+            alphabets = enterAlphabets(cant_alfabetos)
+   
+        case 2:
+            print("alfabetos...", alphabets)
+            time.sleep(2)
+      
+        case 0:
+            break
+        case _:
+            print("opcion invalida!")
+            input("presione para continuar")
+
+
 
 
