@@ -50,7 +50,7 @@ class Alphabets(SetOperations):
                 i-=1    
             
             i+=1    
-            
+
         return list_result
     
     
@@ -80,3 +80,10 @@ class Language(SetOperations):
 
         return concatenate_languages
 
+    def inverse_language(languange):
+        inverse_laguage = list(reversed(languange))
+
+        return inverse_laguage
+    
+    def power_language():
+        pass

@@ -28,7 +28,7 @@ while True:
    
         case 2:
             print("alfabetos...", alphabets)
-            time.sleep(2)
+            time.sleep(4)
       
         case 0:
             break
