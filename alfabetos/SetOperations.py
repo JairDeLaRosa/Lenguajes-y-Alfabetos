@@ -52,7 +52,32 @@ class Alphabets(SetOperations):
             i+=1    
         
         
+        # def cerradura_de_estrella(vector, cantidad):
+        #     letras = vector[0]
+        #     numeros = vector[1]
+        #     cerradura = []
+
+        #     for _ in range(cantidad):
+        #         letra = random.choice(letras)
+        #         numero = random.choice(numeros)
+        #         elemento = f"{letra}{numero}"
+        #         cerradura.append(elemento)
+
+        #     return cerradura
+        
     
     
 class Language(SetOperations):
-        pass
+
+    def create(alphabet, number):
+        symbol1 = alphabet[0]
+        symbol2 = alphabet[1]
+        language = []
+        
+        for _ in range(number):
+            symbol1 = random.choice(symbol1)
+            symbol2 = random.choice(symbol2)
+            word = F"{symbol1}{symbol2}"
+            language.append(word)
+        
+        return language
