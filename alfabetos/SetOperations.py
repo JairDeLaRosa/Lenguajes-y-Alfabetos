@@ -50,7 +50,8 @@ class Alphabets(SetOperations):
                 i-=1    
             
             i+=1    
-        
+            
+        return list_result
     
     
 class Language(SetOperations):
