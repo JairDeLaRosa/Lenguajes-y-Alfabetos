@@ -1,4 +1,4 @@
-from alfabetos.SetOperations import SetOperations
+from alfabetos.clases import SetOperations
 import os, time
 
 def enterAlphabets(N):
@@ -7,34 +7,40 @@ def enterAlphabets(N):
     for i in range(i,N):
         alphabet=set(input(f"ingrese el alfabeto separado {i + 1} por espacios: ").split(" "))
         listAlphabets.append(alphabet)
- 
+
     return listAlphabets
 
 alphabets=[]
 
+lista = SetOperations
 
-while True:
-    os.system("cls")
-    print("""
-        1-ingresa alfabeto
-        2-mostrar
-        0-salir
-    """)
-    opcion = int(input("Ingrese la opcion: "))
-    match opcion:
-        case 1:
-            cant_alfabetos = int(input("Ingrese la cantidad de alfabetos a ingresar: "))
-            alphabets = enterAlphabets(cant_alfabetos)
-   
-        case 2:
-            print("alfabetos...", alphabets)
-            time.sleep(2)
-      
-        case 0:
-            break
-        case _:
-            print("opcion invalida!")
-            input("presione para continuar")
+
+
+
+
+
+# while True:
+#     os.system("cls")
+#     print("""
+#         1-ingresa alfabeto
+#         2-mostrar
+#         0-salir
+#     """)
+#     opcion = int(input("Ingrese la opcion: "))
+#     match opcion:
+#         case 1:
+#             cant_alfabetos = int(input("Ingrese la cantidad de alfabetos a ingresar: "))
+#             alphabets = enterAlphabets(cant_alfabetos)
+
+#         case 2:
+#             print("alfabetos...", alphabets)
+#             time.sleep(2)
+
+#         case 0:
+#             break
+#         case _:
+#             print("opcion invalida!")
+#             input("presione para continuar")
 
 
 

@@ -10,8 +10,8 @@ class SetOperations:
     def get_index(self, index):
         return self.list[index]
 
-    def set_list(self, list):
-        self.list = list
+    def set_list(self, lista):
+        self.list = lista
     
     def get_list(self):
         return self.list
