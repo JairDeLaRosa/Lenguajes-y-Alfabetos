@@ -56,7 +56,7 @@ class Alphabets(SetOperations):
     
     
 class Language(SetOperations):
-
+    
     def create_language(alphabet, number):
         symbols1 = alphabet[0]
         symbols2 = alphabet[1]
