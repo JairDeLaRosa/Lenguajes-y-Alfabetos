@@ -1,4 +1,5 @@
-import random
+import random #languaje
+import itertools #language
 class SetOperations:
     def __init__(self, alphabet1,alphabet2):
           def __init__(self):
@@ -50,9 +51,51 @@ class Alphabets(SetOperations):
                 i-=1    
             
             i+=1    
-        
-        
+
+        return list_result
     
     
 class Language(SetOperations):
-        pass
+
+    def create_language(alphabet, number):
+        symbols1 = alphabet[0]
+        symbols2 = alphabet[1]
+        language = []
+        
+        for _ in range(number):
+            symbol1 = random.choice(symbols1)
+            symbol2 = random.choice(symbols2)
+            word = F"{symbol1}{symbol2}"
+            language.append(word)
+        
+        return language
+    
+    def cardinality_language(language):
+        cont = len(language)
+        return cont
+
+    
+    def concatenate_languages(language1, language2):        
+        concatenate_languages = language1
+        #extend Used to concatenate iterables
+        concatenate_languages = concatenate_languages.extend(language2)
+
+        return concatenate_languages
+
+    def inverse_language(languange):
+        inverse_laguage = list(reversed(languange))
+
+        return inverse_laguage
+    
+    def power_language(langauge, exponent):
+        if exponent < 0:
+            return None
+        
+        #itertools.product to generate all possible combinations of language strings to the specified power.
+        combinations = itertools.product(langauge, exponent)
+
+        for combination in combinations:
+            result = "".join(combination)
+
+        return result
+
