@@ -98,4 +98,3 @@ class Language(SetOperations):
             result = "".join(combination)
 
         return result
-
