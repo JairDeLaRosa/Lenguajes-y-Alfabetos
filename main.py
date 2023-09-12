@@ -1,5 +1,6 @@
 import os, time
 from clases.Alphabets import Alphabets
+from clases.Languages import Language
 
 
 def procesar_alfabeto(alfabeto):
@@ -46,6 +47,9 @@ def main():
                 for i in Listalphabets: 
                     alphabets.add_element(i) 
             case 2:
+                number = input('How many words will each lenfuahe have?: ')
+                print('Languages created')
+                Language.create_language(alphabets, number)
                 break
             
             case 3:
