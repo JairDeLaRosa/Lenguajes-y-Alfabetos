@@ -39,13 +39,13 @@ class Operations:
             
     
 
-lista=[]
-a1=[1, 2, 3, 4]
-a2=[3, 4, 5]    
-a3=[3,4, 6, 7]
-lista.append(a1)
-lista.append(a2)
-lista.append(a3)
-print(lista)
-conjunto=Operations(lista)
-print(conjunto.interceccion())
+# lista=[]
+# a1=[1, 2, 3, 4]
+# a2=[3, 4, 5]    
+# a3=[3,4, 6, 7]
+# lista.append(a1)
+# lista.append(a2)
+# lista.append(a3)
+# print(lista)
+# conjunto=Operations(lista)
+# print(conjunto.interceccion())

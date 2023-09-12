@@ -1,5 +1,5 @@
-from Operations import Operations    
 import random
+from .Operations import Operations
     
 class Alphabets(Operations):
     def star_lock(self, index, cant_word):
