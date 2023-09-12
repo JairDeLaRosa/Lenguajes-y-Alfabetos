@@ -1,10 +1,9 @@
-from Operations import Operations
+from .Operations import Operations
+import random
 
-class Language(Operations):
-    def __init__(self, lista):
-        super().__init__(lista)
+class Language(Operations):  
         
-    def cardinality_language(language):
+    def cardinality_language(self,language):
         return len(language)   
         
     def concatenate_languages(self, language1, language2):
@@ -18,7 +17,7 @@ class Language(Operations):
                     concatenate_language.append(element)
         return concatenate_language    
     
-    def inverse_language(self,language):
+    def inverse_language(self, language):
         inverse_laguage = list(reversed(language))
 
         return inverse_laguage
@@ -43,5 +42,5 @@ class Language(Operations):
 # lista.append(a2)
 # lista.append(a3)
 # print(lista)
-# conjunto=Language(lista)
-# print(conjunto.pow(a1,3))
+# conjunto=Language()
+# print(conjunto.concatenate_languages(a1,a2))

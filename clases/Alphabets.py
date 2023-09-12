@@ -9,7 +9,7 @@ class Alphabets(Operations):
       i = 0
       while i < cant_word:
           word = ""
-          for j in range(random.randint(2, 5)):
+          for j in range(random.randint(1, 5)):
               word += str(random.choice(Alphabet_list))  # Usar la lista en lugar del conjunto
           if word not in list_result:
               list_result.append(word)
