@@ -1,29 +1,42 @@
 class Operations:
-    def __init__(self, lista):
-        self.list=list(lista)
-        
-    def getList(self):
+    def __init__(self):
+        self.list = []
+
+    def add_element(self, elemnt):
+        self.list.append(elemnt)
+
+    def get_element(self, element):
+        return self.list[element]
+
+    def set_list(self, lista):
+        self.list = lista
+
+    def get_list(self):
         return self.list
-    
-    def union(self):
-        union=set()
-        for e in self.list:
-            e=set(e)
-            union=union | e
-        return list(union)
-    
-    def resta(self):
-        resta=set()
-        for e in self.list:
-            resta=set(e)-resta
-        return list(resta)
-    
-    def interceccion(self):
-        interception=set(self.list[0])
-        for e in self.list:
-            interception=interception & set(e)
-        
-        return list(interception)    
+
+    def union(self, index1, index2):
+        list_result = set(self.list[index1]) | set(self.list[index2])
+        return list(list_result)
+
+    def difference(self, index1, index2):
+        list_result = []
+        for index in self.list[index1]:
+            if index not in self.list[index2]:
+                list_result.append(index)
+        return list_result
+
+    def interception(self, index1, index2):
+        list_result = []
+        for index in self.list[index1]:
+            if index in self.list[index2]:
+                list_result.append(index)
+        return list_result
+    def mostrar(self):
+        i = 0
+        while i < len(self.list):  # Cambiar la condición a i < len(self.list)
+            print(f"{i}: {self.list[i]}")
+            i += 1
+            
     
 
 lista=[]
