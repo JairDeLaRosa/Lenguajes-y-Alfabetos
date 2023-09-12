@@ -1,7 +1,25 @@
-from .Operations import Operations
+from Operations import Operations
 import random
 
-class Language(Operations):  
+class Language(Operations):
+    def __init__(self, lista):
+        super().__init__(lista)
+
+    def create_language(lista, cantidad):
+        cerradura = [] 
+        alphabets = []
+        len_Alphabets = len(lista)
+
+        for _ in range(len_Alphabets):
+            alphabets.extend(lista[_])
+               
+        for _ in range(cantidad):
+            letra = random.choice(alphabets)
+            letra2 = random.choice(alphabets)
+            elemento = f"{letra}{letra2}"
+            cerradura.append(elemento)
+
+        return cerradura
         
     def cardinality_language(self,language):
         return len(language)   
@@ -42,5 +60,5 @@ class Language(Operations):
 # lista.append(a2)
 # lista.append(a3)
 # print(lista)
-# conjunto=Language()
-# print(conjunto.concatenate_languages(a1,a2))
+# conjunto = Language
+# print(conjunto.create_language(lista,10))
