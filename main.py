@@ -62,9 +62,17 @@ while True:
             cadena=alphabets.star_lock(index,longitud)
             #alphabets.add_element(intercepcion)
             print(f"la cerrradura de estrella del alfabeto es:{cadena}")  
-            input('presiona una tecla para continuar...')    
-        case 0:
-            break
+            input('presiona una tecla para continuar...')
+        case 7:        
+            pass
+        case 8:   
+            pass     
+        case 9: 
+            pass       
+        case 10:
+            pass        
+        case 11:
+            pass
         case _:
             print("opcion invalida!")
             input("presione para continuar")
