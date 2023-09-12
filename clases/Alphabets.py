@@ -1,9 +1,9 @@
+from Operations import Operations    
 import random
-from Operations import Operations
-    
+
 class Alphabets(Operations):
-    def __init__(self, a1, a2):
-        super().__init__(a1, a2)    
+    def __init__(self, lista):
+        super().__init__(lista)    
     
     def Cerradura(self, conjunto,numPalabras):
         lenguaje = list()
