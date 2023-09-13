@@ -1,5 +1,6 @@
 from clases.Alphabets import Alphabets
 from clases.Languages import Language
+import os, time
 
 def procesar_alfabeto(alfabeto):
     alfabeto=alfabeto[1:len(alfabeto)-1]
@@ -37,6 +38,7 @@ def main():
           2-Crear lenguajes
           3-Opciones de alfabetos
           4-Opciones de lenguajes
+          0-Salir
     """)
         option=int(input("Ingrese la opción: "))
         match option:
@@ -46,17 +48,11 @@ def main():
                 for i in Listalphabets: 
                     alphabets.add_element(i) 
             case 2:
-                number = input('How many words will each lenfuahe have?: ')
-                print('Languages created')
-                Language.create_language(alphabets, number)
-                break
-            
-            case 3:
                 
-                number = input('How many words will each lenfuahe have?: ') 
-                lenguage1=alphabets.star_lock(0,40)
+                number = int(input('How many words will each lenfuahe have?: '))
+                lenguage1=alphabets.star_lock(0,number)
                 leng.add_element(lenguage1)
-                lenguage2=alphabets.star_lock(0,40)
+                lenguage2=alphabets.star_lock(0,number)
                 leng.add_element(lenguage2)
                 print('Languages created')
                 input('presiona una tecla para continuar...')
@@ -69,7 +65,7 @@ def main():
                         3-diferencia alfabeto por indice
                         4-intercepcion de alfabeto por indice
                         5-cerradura de estrella de alfabeto
-                        0-salir
+                        0-Regresar
                     """)
                     opcion = int(input("Ingrese la opcion: "))
                     match opcion:
@@ -97,7 +93,7 @@ def main():
                             index2=int(input('ingresa el segundo indice: '))
                             intercepcion=alphabets.interception(index1,index2)
                             #alphabets.add_element(intercepcion)
-                            print(f"la union de {alphabets.get_element(index1)} y de {alphabets.get_element(index2)} es:")  
+                            print(f"la intercepción de {alphabets.get_element(index1)} y de {alphabets.get_element(index2)} es:")  
                             print(intercepcion)
                             input('presiona una tecla para continuar...')
                         case 5:
@@ -169,7 +165,7 @@ def main():
                             input('presiona una tecla para continuar...')    
                             
                         case 7: #Inversa de lenguaje
-                            i=int(input('Insertar indice del lenguaje a sacar la potencia: '))
+                            i=int(input('Insertar indice del lenguaje a sacar la inversa: '))
                             lenguaje_inverso=leng.get_element(i)
                             inversa_lenguaje=leng.inverse_language(lenguaje_inverso)    
                             print(f"la inversa del lenguaje {leng.get_element(i)} es:")  

@@ -1,25 +1,7 @@
-from Operations import Operations
+from .Operations import Operations
 import random
 
-class Language(Operations):
-    def __init__(self, lista):
-        super().__init__(lista)
-
-    def create_language(lista, cantidad):
-        cerradura = [] 
-        alphabets = []
-        len_Alphabets = len(lista)
-
-        for _ in range(len_Alphabets):
-            alphabets.extend(lista[_])
-               
-        for _ in range(cantidad):
-            letra = random.choice(alphabets)
-            letra2 = random.choice(alphabets)
-            elemento = f"{letra}{letra2}"
-            cerradura.append(elemento)
-
-        return cerradura
+class Language(Operations):  
         
     def cardinality_language(self,language):
         return len(language)   
@@ -36,9 +18,9 @@ class Language(Operations):
         return concatenate_language    
     
     def inverse_language(self, language):
-        inverse_laguage = list(reversed(language))
+        reversed_lista = [cadena[::-1] for cadena in language]
 
-        return inverse_laguage
+        return reversed_lista
     
     
     def pow(self, language, potencia):
@@ -49,9 +31,12 @@ class Language(Operations):
             for num in range(potencia-1):
                 listaPow.extend(self.concatenate_languages(listaPow,language))
                 
-        return listaPow        
+        listaPow=set(listaPow)
+        listaPow=listaPow | set(language)        
+                
+        return list[listaPow]        
     
-    
+#pruebas finales
 # lista=[]
 # a1=['ab','cd', 'dc'] 
 # a2=[3, 4, 5]
@@ -60,5 +45,5 @@ class Language(Operations):
 # lista.append(a2)
 # lista.append(a3)
 # print(lista)
-# conjunto = Language
-# print(conjunto.create_language(lista,10))
+# conjunto=Language()
+# print(conjunto.concatenate_languages(a1,a2))
