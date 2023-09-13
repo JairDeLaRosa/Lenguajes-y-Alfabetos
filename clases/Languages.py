@@ -18,7 +18,7 @@ class Language(Operations):
         return concatenate_language    
     
     def inverse_language(self, language):
-        reversed_lista = [cadena[::-1] for cadena in language]
+        reversed_lista = [cadena[::-1] for cadena in language[::-1]]
 
         return reversed_lista
     
