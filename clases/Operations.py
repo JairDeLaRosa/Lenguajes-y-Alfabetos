@@ -31,9 +31,9 @@ class Operations:
             if index in self.list[index2]:
                 list_result.append(index)
         return list_result
-    def mostrar(self):
+    def show(self):
         i = 0
-        while i < len(self.list):  # Cambiar la condición a i < len(self.list)
+        while i < len(self.list):
             print(f"{i}: {self.list[i]}")
             print('')
             i += 1
